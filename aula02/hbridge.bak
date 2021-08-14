@@ -1,0 +1,442 @@
+EESchema Schematic File Version 2
+LIBS:vss-rescue
+LIBS:stepper drivers
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:w_analog
+LIBS:Carlolib-dev
+LIBS:RF_OEM
+LIBS:boosterpack
+LIBS:DRV8872
+LIBS:stm32
+LIBS:vss-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title ""
+Date "2016-11-27"
+Rev "José Roberto"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L DRV8872 IC2
+U 1 1 58972735
+P 4550 3150
+F 0 "IC2" H 4150 4000 50  0000 L BNN
+F 1 "DRV8872" H 4600 4000 50  0000 L BNN
+F 2 "" H 4550 3050 50  0001 C CNN
+F 3 "" H 4550 3150 60  0001 C CNN
+	1    4550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X06 P1
+U 1 1 58972BB0
+P 7050 2450
+F 0 "P1" H 7050 2800 50  0000 C CNN
+F 1 "CONN_01X06" V 7150 2450 50  0000 C CNN
+F 2 "" H 7050 2450 50  0000 C CNN
+F 3 "" H 7050 2450 50  0000 C CNN
+	1    7050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2500 6450 2500
+Text Notes 6500 2500 0    60   ~ 0
+VCC
+Text Notes 6500 2600 0    60   ~ 0
+M1
+Text Notes 6500 2700 0    60   ~ 0
+M2
+Text Notes 6500 2400 0    60   ~ 0
+OUT A
+Text Notes 6500 2300 0    60   ~ 0
+OUT B
+Text Notes 6500 2200 0    60   ~ 0
+GND
+Wire Wire Line
+	6000 2400 6850 2400
+Wire Wire Line
+	6150 2300 6850 2300
+$Comp
+L GND #PWR18
+U 1 1 58972BC0
+P 6450 2200
+F 0 "#PWR18" H 6450 1950 50  0001 C CNN
+F 1 "GND" H 6450 2050 50  0000 C CNN
+F 2 "" H 6450 2200 50  0000 C CNN
+F 3 "" H 6450 2200 50  0000 C CNN
+	1    6450 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2200 6450 2200
+Wire Wire Line
+	6000 2400 6000 2200
+Wire Wire Line
+	6150 2300 6150 2200
+Wire Notes Line
+	6450 2100 6450 2750
+Wire Notes Line
+	6450 2750 6800 2750
+Wire Notes Line
+	6800 2750 6800 2100
+Wire Notes Line
+	6800 2100 6450 2100
+Text Notes 6350 2950 0    60   ~ 0
+  POLOLU\nCONVENTION
+Text GLabel 6000 2200 1    60   Input ~ 0
+ENCODER_1L
+Text GLabel 6150 2200 1    60   Input ~ 0
+ENCODER_2L
+$Comp
+L +3.3V #PWR19
+U 1 1 58972BD0
+P 6450 2500
+F 0 "#PWR19" H 6450 2350 50  0001 C CNN
+F 1 "+3.3V" H 6450 2640 50  0000 C CNN
+F 2 "" H 6450 2500 50  0000 C CNN
+F 3 "" H 6450 2500 50  0000 C CNN
+	1    6450 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6850 2700 6150 2700
+Wire Wire Line
+	6150 2700 6150 2850
+Wire Wire Line
+	6150 2850 5150 2850
+Wire Wire Line
+	5150 2450 6150 2450
+Wire Wire Line
+	6150 2450 6150 2600
+Wire Wire Line
+	6150 2600 6850 2600
+$Comp
+L R R4
+U 1 1 58973037
+P 5400 2650
+F 0 "R4" V 5400 2650 50  0000 C CNN
+F 1 "0R43" V 5300 2650 50  0000 C CNN
+F 2 "" V 5330 2650 50  0000 C CNN
+F 3 "" H 5400 2650 50  0000 C CNN
+	1    5400 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 2650 5250 2650
+$Comp
+L GNDD #PWR16
+U 1 1 589732D6
+P 5700 2650
+F 0 "#PWR16" H 5700 2400 50  0001 C CNN
+F 1 "GNDD" H 5700 2500 50  0000 C CNN
+F 2 "" H 5700 2650 50  0000 C CNN
+F 3 "" H 5700 2650 50  0000 C CNN
+	1    5700 2650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5700 2650 5550 2650
+Text GLabel 5300 2300 2    60   Output ~ 0
+ISENSE_L
+Wire Wire Line
+	5300 2300 5200 2300
+Wire Wire Line
+	5200 2300 5200 2650
+Connection ~ 5200 2650
+$Comp
+L VCC #PWR14
+U 1 1 58973B82
+P 5350 3050
+F 0 "#PWR14" H 5350 2900 50  0001 C CNN
+F 1 "VCC" H 5350 3200 50  0000 C CNN
+F 2 "" H 5350 3050 50  0000 C CNN
+F 3 "" H 5350 3050 50  0000 C CNN
+	1    5350 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 3050 5350 3050
+$Comp
+L GNDD #PWR12
+U 1 1 58973DB7
+P 3750 2450
+F 0 "#PWR12" H 3750 2200 50  0001 C CNN
+F 1 "GNDD" H 3750 2300 50  0000 C CNN
+F 2 "" H 3750 2450 50  0000 C CNN
+F 3 "" H 3750 2450 50  0000 C CNN
+	1    3750 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 2450 3750 2450
+Text GLabel 3800 2650 0    60   Input ~ 0
+PWM_L1
+Text GLabel 3800 2850 0    60   Input ~ 0
+PWM_L2
+Wire Wire Line
+	3950 2650 3800 2650
+Wire Wire Line
+	3800 2850 3950 2850
+Text GLabel 3800 3050 0    60   Input ~ 0
+FAULT_L
+Wire Wire Line
+	3950 3050 3800 3050
+$Comp
+L DRV8872 IC3
+U 1 1 58976BC5
+P 4550 5300
+F 0 "IC3" H 4150 6150 50  0000 L BNN
+F 1 "DRV8872" H 4600 6150 50  0000 L BNN
+F 2 "HSOP-8" H 4550 5200 50  0001 C CNN
+F 3 "" H 4550 5300 60  0001 C CNN
+	1    4550 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X06 P2
+U 1 1 58976BCB
+P 7050 4600
+F 0 "P2" H 7050 4950 50  0000 C CNN
+F 1 "CONN_01X06" V 7150 4600 50  0000 C CNN
+F 2 "" H 7050 4600 50  0000 C CNN
+F 3 "" H 7050 4600 50  0000 C CNN
+	1    7050 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4650 6450 4650
+Text Notes 6500 4650 0    60   ~ 0
+VCC
+Text Notes 6500 4750 0    60   ~ 0
+M1
+Text Notes 6500 4850 0    60   ~ 0
+M2
+Text Notes 6500 4550 0    60   ~ 0
+OUT A
+Text Notes 6500 4450 0    60   ~ 0
+OUT B
+Text Notes 6500 4350 0    60   ~ 0
+GND
+Wire Wire Line
+	6000 4550 6850 4550
+Wire Wire Line
+	6150 4450 6850 4450
+$Comp
+L GND #PWR20
+U 1 1 58976BDA
+P 6450 4350
+F 0 "#PWR20" H 6450 4100 50  0001 C CNN
+F 1 "GND" H 6450 4200 50  0000 C CNN
+F 2 "" H 6450 4350 50  0000 C CNN
+F 3 "" H 6450 4350 50  0000 C CNN
+	1    6450 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4350 6450 4350
+Wire Wire Line
+	6000 4550 6000 4350
+Wire Wire Line
+	6150 4450 6150 4350
+Wire Notes Line
+	6450 4250 6450 4900
+Wire Notes Line
+	6450 4900 6800 4900
+Wire Notes Line
+	6800 4900 6800 4250
+Wire Notes Line
+	6800 4250 6450 4250
+Text Notes 6350 5100 0    60   ~ 0
+  POLOLU\nCONVENTION
+Text GLabel 6000 4350 1    60   Input ~ 0
+ENCODER_1R
+Text GLabel 6150 4350 1    60   Input ~ 0
+ENCODER_2R
+$Comp
+L +3.3V #PWR21
+U 1 1 58976BEA
+P 6450 4650
+F 0 "#PWR21" H 6450 4500 50  0001 C CNN
+F 1 "+3.3V" H 6450 4790 50  0000 C CNN
+F 2 "" H 6450 4650 50  0000 C CNN
+F 3 "" H 6450 4650 50  0000 C CNN
+	1    6450 4650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6850 4850 6150 4850
+Wire Wire Line
+	6150 4850 6150 5000
+Wire Wire Line
+	6150 5000 5150 5000
+Wire Wire Line
+	5150 4600 6150 4600
+Wire Wire Line
+	6150 4600 6150 4750
+Wire Wire Line
+	6150 4750 6850 4750
+$Comp
+L R R5
+U 1 1 58976BF6
+P 5400 4800
+F 0 "R5" V 5400 4800 50  0000 C CNN
+F 1 "0R43" V 5300 4800 50  0000 C CNN
+F 2 "" V 5330 4800 50  0000 C CNN
+F 3 "" H 5400 4800 50  0000 C CNN
+	1    5400 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 4800 5250 4800
+$Comp
+L GNDD #PWR17
+U 1 1 58976BFD
+P 5700 4800
+F 0 "#PWR17" H 5700 4550 50  0001 C CNN
+F 1 "GNDD" H 5700 4650 50  0000 C CNN
+F 2 "" H 5700 4800 50  0000 C CNN
+F 3 "" H 5700 4800 50  0000 C CNN
+	1    5700 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5700 4800 5550 4800
+Text GLabel 5300 4450 2    60   Output ~ 0
+ISENSE_R
+Wire Wire Line
+	5300 4450 5200 4450
+Wire Wire Line
+	5200 4450 5200 4800
+Connection ~ 5200 4800
+$Comp
+L VCC #PWR15
+U 1 1 58976C08
+P 5350 5200
+F 0 "#PWR15" H 5350 5050 50  0001 C CNN
+F 1 "VCC" H 5350 5350 50  0000 C CNN
+F 2 "" H 5350 5200 50  0000 C CNN
+F 3 "" H 5350 5200 50  0000 C CNN
+	1    5350 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 5200 5350 5200
+$Comp
+L GNDD #PWR13
+U 1 1 58976C0F
+P 3750 4600
+F 0 "#PWR13" H 3750 4350 50  0001 C CNN
+F 1 "GNDD" H 3750 4450 50  0000 C CNN
+F 2 "" H 3750 4600 50  0000 C CNN
+F 3 "" H 3750 4600 50  0000 C CNN
+	1    3750 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 4600 3750 4600
+Text GLabel 3800 4800 0    60   Input ~ 0
+PWM_R1
+Text GLabel 3800 5000 0    60   Input ~ 0
+PWM_R2
+Wire Wire Line
+	3950 4800 3800 4800
+Wire Wire Line
+	3800 5000 3950 5000
+Text GLabel 3800 5200 0    60   Input ~ 0
+FAULT_R
+Wire Wire Line
+	3950 5200 3800 5200
+Text Notes 5200 4950 0    60   ~ 0
+0.8A LIMIT
+$Comp
+L C C?
+U 1 1 58F9FEC3
+P 5250 3300
+F 0 "C?" H 5275 3400 50  0000 L CNN
+F 1 "100nF" H 5275 3200 50  0000 L CNN
+F 2 "" H 5288 3150 50  0001 C CNN
+F 3 "" H 5250 3300 50  0001 C CNN
+	1    5250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 58F9FF3E
+P 5250 3550
+F 0 "#PWR?" H 5250 3300 50  0001 C CNN
+F 1 "GNDD" H 5250 3400 50  0000 C CNN
+F 2 "" H 5250 3550 50  0000 C CNN
+F 3 "" H 5250 3550 50  0000 C CNN
+	1    5250 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3150 5250 3050
+Connection ~ 5250 3050
+Wire Wire Line
+	5250 3450 5250 3550
+$Comp
+L C C?
+U 1 1 58FA037B
+P 5250 5450
+F 0 "C?" H 5275 5550 50  0000 L CNN
+F 1 "100nF" H 5275 5350 50  0000 L CNN
+F 2 "" H 5288 5300 50  0001 C CNN
+F 3 "" H 5250 5450 50  0001 C CNN
+	1    5250 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5300 5250 5200
+Connection ~ 5250 5200
+$Comp
+L GNDD #PWR?
+U 1 1 58FA0463
+P 5250 5700
+F 0 "#PWR?" H 5250 5450 50  0001 C CNN
+F 1 "GNDD" H 5250 5550 50  0000 C CNN
+F 2 "" H 5250 5700 50  0000 C CNN
+F 3 "" H 5250 5700 50  0000 C CNN
+	1    5250 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5600 5250 5700
+Text Notes 5200 2800 0    60   ~ 0
+0.8A LIMIT
+$EndSCHEMATC

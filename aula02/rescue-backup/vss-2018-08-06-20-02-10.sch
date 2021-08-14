@@ -1,0 +1,148 @@
+EESchema Schematic File Version 2
+LIBS:vss-rescue
+LIBS:Regulators
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:RF_OEM
+LIBS:boosterpack
+LIBS:DRV8872
+LIBS:nRF24L01
+LIBS:stm32f303k8
+LIBS:H-Bridge
+LIBS:MC34063
+LIBS:switches
+LIBS:atmega328p-dip
+LIBS:nucleo-f303k8
+LIBS:vss-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title "VSS"
+Date "2016-11-27"
+Rev "José Roberto"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 5150 3050 1650 2500
+U 583B6F17
+F0 "Microcontroller" 60
+F1 "microcontroller.sch" 60
+F2 "PWM_R1" O R 6800 4650 60 
+F3 "PWM_R2" O R 6800 4800 60 
+F4 "PWM_L1" O R 6800 3200 60 
+F5 "PWM_L2" O R 6800 3350 60 
+F6 "ENCODER_R2" I R 6800 5100 60 
+F7 "ENCODER_R1" I R 6800 4950 60 
+F8 "ENCODER_L1" I R 6800 3500 60 
+F9 "ENCODER_L2" I R 6800 3650 60 
+F10 "SPI_SCK" O L 5150 4900 60 
+F11 "SPI_MISO" I L 5150 5200 60 
+F12 "SPI_MOSI" O L 5150 5050 60 
+F13 "SPI_CS" O L 5150 4750 60 
+F14 "RADIO_IRQ" I L 5150 4600 60 
+F15 "RADIO_CE" O L 5150 4450 60 
+F16 "BATTERY_VOLTAGE" I L 5150 3500 60 
+$EndSheet
+$Sheet
+S 7500 3050 1300 1050
+U 583B7CD9
+F0 "MotorL" 60
+F1 "motorL.sch" 60
+F2 "PWM_1" I L 7500 3200 60 
+F3 "PWM_2" I L 7500 3350 60 
+F4 "ENCODER_1" O L 7500 3500 60 
+F5 "ENCODER_2" O L 7500 3650 60 
+$EndSheet
+$Sheet
+S 3000 3050 1300 900 
+U 5884E5A9
+F0 "Power" 60
+F1 "Power.sch" 60
+F2 "BAT_SENSE" O R 4300 3500 60 
+$EndSheet
+$Sheet
+S 3000 4300 1300 1050
+U 5912AF79
+F0 "Radio" 60
+F1 "radio.sch" 60
+F2 "MISO" I R 4300 5200 60 
+F3 "MOSI" I R 4300 5050 60 
+F4 "SCK" I R 4300 4900 60 
+F5 "CSN" I R 4300 4750 60 
+F6 "IRQ" O R 4300 4600 60 
+F7 "CE" I R 4300 4450 60 
+$EndSheet
+$Sheet
+S 7500 4500 1300 1050
+U 59138C67
+F0 "MotorR" 60
+F1 "motorR.sch" 60
+F2 "PWM_1" I L 7500 4650 60 
+F3 "PWM_2" I L 7500 4800 60 
+F4 "ENCODER_1" O L 7500 4950 60 
+F5 "ENCODER_2" O L 7500 5100 60 
+$EndSheet
+Wire Wire Line
+	5150 4450 4300 4450
+Wire Wire Line
+	4300 4600 5150 4600
+Wire Wire Line
+	5150 4750 4300 4750
+Wire Wire Line
+	4300 4900 5150 4900
+Wire Wire Line
+	5150 5050 4300 5050
+Wire Wire Line
+	4300 5200 5150 5200
+Wire Wire Line
+	6800 3200 7500 3200
+Wire Wire Line
+	7500 3350 6800 3350
+Wire Wire Line
+	4300 3500 5150 3500
+Wire Wire Line
+	6800 4800 7500 4800
+Wire Wire Line
+	7500 4650 6800 4650
+Wire Wire Line
+	7500 3500 6800 3500
+Wire Wire Line
+	6800 3650 7500 3650
+Wire Wire Line
+	7500 4950 6800 4950
+Wire Wire Line
+	6800 5100 7500 5100
+$EndSCHEMATC

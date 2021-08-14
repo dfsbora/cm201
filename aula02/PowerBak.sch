@@ -1,0 +1,233 @@
+EESchema Schematic File Version 2
+LIBS:vss-rescue
+LIBS:Regulators
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:RF_OEM
+LIBS:boosterpack
+LIBS:DRV8872
+LIBS:nRF24L01
+LIBS:stm32f303k8
+LIBS:H-Bridge
+LIBS:MC34063
+LIBS:switches
+LIBS:atmega328p-dip
+LIBS:nucleo-f303k8
+LIBS:vss-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R9
+U 1 1 5884E75C
+P 5050 1800
+F 0 "R9" H 5150 1850 50  0000 L CNN
+F 1 "22k" H 5150 1750 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 4980 1800 50  0001 C CNN
+F 3 "" H 5050 1800 50  0000 C CNN
+	1    5050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR026
+U 1 1 5884E76A
+P 5050 2650
+F 0 "#PWR026" H 5050 2400 50  0001 C CNN
+F 1 "GND" H 5050 2500 50  0000 C CNN
+F 2 "" H 5050 2650 50  0000 C CNN
+F 3 "" H 5050 2650 50  0000 C CNN
+	1    5050 2650
+	1    0    0    -1  
+$EndComp
+Text Notes 4850 1200 0    60   ~ 0
+BATTERY SENSOR
+$Comp
+L CONN_2X1F J3
+U 1 1 5884EFC9
+P 1700 1800
+F 0 "J3" H 1700 2000 40  0000 C CNN
+F 1 "BATTERY" H 1700 1700 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02_Pitch2.54mm" H 1700 1800 60  0001 C CNN
+F 3 "" H 1700 1800 60  0000 C CNN
+	1    1700 1800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_2X1F J2
+U 1 1 58855467
+P 1700 2200
+F 0 "J2" H 1700 2400 40  0000 C CNN
+F 1 "EXT_CHARGE" H 1700 2100 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1700 2200 60  0001 C CNN
+F 3 "" H 1700 2200 60  0000 C CNN
+	1    1700 2200
+	-1   0    0    -1  
+$EndComp
+Text Notes 1650 1200 0    60   ~ 0
+BATTERY, POWER SWTICH AND PROTECTION DIODE
+$Comp
+L +BATT #PWR028
+U 1 1 5924BCEA
+P 3450 1550
+F 0 "#PWR028" H 3450 1400 50  0001 C CNN
+F 1 "+BATT" H 3450 1690 50  0000 C CNN
+F 2 "" H 3450 1550 50  0001 C CNN
+F 3 "" H 3450 1550 50  0001 C CNN
+	1    3450 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR030
+U 1 1 5924B5F6
+P 5050 1550
+F 0 "#PWR030" H 5050 1400 50  0001 C CNN
+F 1 "+BATT" H 5050 1690 50  0000 C CNN
+F 2 "" H 5050 1550 50  0001 C CNN
+F 3 "" H 5050 1550 50  0001 C CNN
+	1    5050 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky_ALT D3
+U 1 1 5924E5AC
+P 2950 1600
+F 0 "D3" H 3050 1500 50  0000 C CNN
+F 1 "SS34" H 2800 1500 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMB_Handsoldering" H 2950 1600 50  0001 C CNN
+F 3 "" H 2950 1600 50  0001 C CNN
+	1    2950 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R10
+U 1 1 5924EFBA
+P 5050 2300
+F 0 "R10" H 5150 2350 50  0000 L CNN
+F 1 "2k2" H 5150 2250 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 4980 2300 50  0001 C CNN
+F 3 "" H 5050 2300 50  0000 C CNN
+	1    5050 2300
+	1    0    0    -1  
+$EndComp
+Text HLabel 5250 2050 2    60   Output ~ 0
+BAT_SENSE
+$Comp
+L GND #PWR032
+U 1 1 592A72CB
+P 2000 2250
+F 0 "#PWR032" H 2000 2000 50  0001 C CNN
+F 1 "GND" H 2000 2100 50  0000 C CNN
+F 2 "" H 2000 2250 50  0001 C CNN
+F 3 "" H 2000 2250 50  0001 C CNN
+	1    2000 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR033
+U 1 1 592AE65F
+P 2000 1850
+F 0 "#PWR033" H 2000 1600 50  0001 C CNN
+F 1 "GND" H 2000 1700 50  0000 C CNN
+F 2 "" H 2000 1850 50  0001 C CNN
+F 3 "" H 2000 1850 50  0001 C CNN
+	1    2000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPDT SW1
+U 1 1 592F663A
+P 2400 1700
+F 0 "SW1" H 2300 1850 50  0000 C CNN
+F 1 "KCD1-101/3P" H 2400 1500 50  0000 C CNN
+F 2 "lib:KCD1-102-3P" H 2400 1700 50  0001 C CNN
+F 3 "http://www.jhswitch.com/html_products/JH-SWITCH-KCD1-101-17.html" H 2400 1700 50  0001 C CNN
+F 4 "http://www.soldafria.com.br/chave-gangorra-kcd1-102-preta-3-terminais" H 2400 1700 60  0001 C CNN "Supplier link"
+	1    2400 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2450 5050 2650
+Wire Wire Line
+	5050 1950 5050 2150
+Wire Wire Line
+	5050 1650 5050 1550
+Wire Notes Line
+	4500 2950 5900 2950
+Wire Notes Line
+	5900 2950 5900 1250
+Wire Notes Line
+	5900 1250 4500 1250
+Wire Notes Line
+	4500 1250 4500 2950
+Wire Notes Line
+	1450 1250 4200 1250
+Wire Notes Line
+	4200 1250 4200 2800
+Wire Notes Line
+	4200 2800 1450 2800
+Wire Notes Line
+	1450 2800 1450 1250
+Wire Wire Line
+	1850 2200 2000 2200
+Wire Wire Line
+	1850 1800 2000 1800
+Wire Wire Line
+	1850 2100 2750 2100
+Wire Wire Line
+	1850 1700 2200 1700
+Wire Wire Line
+	2000 1800 2000 1850
+Wire Wire Line
+	2000 2200 2000 2250
+Wire Wire Line
+	3450 1600 3450 1550
+Wire Wire Line
+	2600 1600 2800 1600
+Wire Wire Line
+	3100 1600 3450 1600
+Wire Wire Line
+	2750 2100 2750 1800
+Wire Wire Line
+	2750 1800 2600 1800
+Wire Wire Line
+	5250 2050 5050 2050
+Connection ~ 5050 2050
+$EndSCHEMATC
